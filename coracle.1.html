@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Request Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .send-button {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Refund Request Email</h2>
+    <textarea id="emailContent">
+Subject: Urgent: Request for Refund of Blocked Bank Account
+
+Dear Coracle Bank Customer Service,
+
+I hope this message finds you well. I am writing to follow up on my previous request submitted two months ago regarding the refund of my blocked bank account. Despite my initial request and subsequent patience, I have yet to receive any resolution or further communication from your team.
+
+I am extremely concerned about the prolonged delay and would appreciate an immediate update on the status of my request. As a loyal customer, I find it disappointing to experience such a lengthy wait time for a matter that should be resolved promptly.
+
+Please prioritize this matter and provide me with a clear timeline for the refund process. If there are any additional documents or information required from my end, kindly inform me at the earliest convenience.
+
+I look forward to your prompt response and resolution of this issue.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+Samer Guda Nasr Alsaadni
+reference ID is  : ba232383607as07
++966548247897
+
+    </textarea>
+    <button class="copy-button" onclick="copyEmail()">Copy Email</button>
+    <button class="send-button" onclick="sendEmail()">Send Email</button>
+</div>
+
+<script>
+    function copyEmail() {
+        var emailContent = document.getElementById("emailContent");
+        emailContent.select();
+        emailContent.setSelectionRange(0, 99999); // For mobile devices
+        document.execCommand("copy");
+        alert("Email content copied to clipboard");
+    }
+
+    function sendEmail() {
+        var emailContent = document.getElementById("emailContent").value;
+        window.location.href = "mailto:customer.service@coraclebank.com?subject=Urgent: Request for Refund of Blocked Bank Account&body=" + encodeURIComponent(emailContent);
+    }
+</script>
+
+</body>
+</html>
